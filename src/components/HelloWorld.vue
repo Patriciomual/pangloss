@@ -1,5 +1,5 @@
 <template>
-  <pangloss/>
+  <pangloss :textoTutorial="array"></pangloss>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ import pangloss from './PanGloss.vue';
         pangloss
     },
     data: () => ({
-
+      array: ['hola']
     }),
   }
 </script>

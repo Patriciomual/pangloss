@@ -41,9 +41,10 @@
 <script >
   export default {
     name: 'PanGloss',
-    data: () => ({
-      textoTutorial: ['holaa'],
-    }),
+    
+    props: {
+        textoTutorial: Array
+    }
   }
 </script>
 <style scoped>

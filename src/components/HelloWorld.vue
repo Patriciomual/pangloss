@@ -11,7 +11,7 @@ import pangloss from './PanGloss.vue';
         pangloss
     },
     data: () => ({
-      array: ['hola']
+      array: ['texto ejemplo']
     }),
   }
 </script>

@@ -15,30 +15,14 @@
                     <v-stepper-content v-for="(elem,idx) in data.content" :key="idx" :step="idx+1">
                         <div :style="{'height': data.height }">
                             <v-row>
-                                <div  v-if="elem.image !== null" class="col-6 d-none d-lg-block">
-                                    <center>
-                                        <img :width="elem.imageSize" :src="elem.image" alt="">
-                                    </center>
-                                </div>
-
-                                <div v-if="elem.image !== null" class="col-12 d-lg-none">
-                                    <center>
-                                        <img :width="elem.imageSize" :src="elem.image" alt="">
-                                    </center>
-                                </div>
                                 
-                                <div class="cinzel col-6 d-none d-lg-block" :style="{'font-size': elem.textSize }">
-                                    <p  :style="{'text-align': elem.textPosition }"> 
-                                        {{elem.text}}
-                                    </p>
-                                    <p :style="{'text-align': elem.btnPosition}">
-                                        <v-btn  rounded text :style="{'color': elem.btnColor}" :href="elem.btnHref">
-                                            {{elem.btnName}}
-                                        </v-btn>                                   
-                                    </p>
-                                </div>
+                                <v-col cols="12" lg="6" md="6" xs="12" sm="12" v-if="elem.image !== null">
+                                    <center>
+                                        <img :width="elem.imageSize" :src="elem.image" alt="">
+                                    </center>
+                                </v-col>
 
-                                <div class="cinzel col-12 d-lg-none" :style="{'font-size': elem.textSize }">
+                                <v-col cols="12" lg="6" md="6" xs="12" sm="12" class="cinzel" :style="{'font-size': elem.textSize }">
                                     <p  :style="{'text-align': elem.textPosition }"> 
                                         {{elem.text}}
                                     </p>
@@ -47,7 +31,7 @@
                                             {{elem.btnName}}
                                         </v-btn>                                   
                                     </p>
-                                </div>
+                                </v-col>
                             </v-row>
                         </div>
                         <span v-if="!finish">

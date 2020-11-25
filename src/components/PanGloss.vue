@@ -22,7 +22,8 @@
                                     </center>
                                 </v-col>
 
-                                <v-col cols="12" lg="6" md="6" xs="12" sm="12" class="cinzel" :style="{'font-size': elem.textSize }">
+                                <v-col cols="12" lg="6" md="6" xs="12" sm="12" class="cinzel" :style="{'font-size': elem.textSize }"
+                                        v-if="elem.image !== null">
                                     <p  :style="{'text-align': elem.textPosition }"> 
                                         {{elem.text}}
                                     </p>
@@ -32,6 +33,18 @@
                                         </v-btn>                                   
                                     </p>
                                 </v-col>
+
+                                <v-col v-else cols="12" lg="12" md="12" xs="12" sm="12" class="cinzel" :style="{'font-size': elem.textSize }">
+                                    <p  :style="{'text-align': elem.textPosition }"> 
+                                        {{elem.text}}
+                                    </p>
+                                    <p :style="{'text-align': elem.btnPosition}">
+                                        <v-btn  rounded text :style="{'color': elem.btnColor}" :href="elem.btnHref">
+                                            {{elem.btnName}}
+                                        </v-btn>                                   
+                                    </p>
+                                </v-col>
+
                             </v-row>
                         </div>
                         <span v-if="!finish">

@@ -15,19 +15,19 @@
                     <v-stepper-content v-for="(elem,idx) in data.content" :key="idx" :step="idx+1">
                         <div :style="{'height': data.height }">
                             <v-row>
-                                <v-col v-if="elem.image !== null" class="d-none d-lg-block">
+                                <div  v-if="elem.image !== null" class="col-6 d-none d-lg-block">
                                     <center>
                                         <img :width="elem.imageSize" :src="elem.image" alt="">
                                     </center>
-                                </v-col>
+                                </div>
 
-                                <v-col cols="12" v-if="elem.image !== null" class="d-lg-none">
+                                <div v-if="elem.image !== null" class="col-12 d-lg-none">
                                     <center>
                                         <img :width="elem.imageSize" :src="elem.image" alt="">
                                     </center>
-                                </v-col>
+                                </div>
                                 
-                                <v-col class="cinzel d-none d-lg-block" :style="{'font-size': elem.textSize }">
+                                <div class="cinzel col-6 d-none d-lg-block" :style="{'font-size': elem.textSize }">
                                     <p  :style="{'text-align': elem.textPosition }"> 
                                         {{elem.text}}
                                     </p>
@@ -36,9 +36,9 @@
                                             {{elem.btnName}}
                                         </v-btn>                                   
                                     </p>
-                                </v-col>
+                                </div>
 
-                                <v-col cols="12" class="cinzel d-lg-none" :style="{'font-size': elem.textSize }">
+                                <div class="cinzel col-12 d-lg-none" :style="{'font-size': elem.textSize }">
                                     <p  :style="{'text-align': elem.textPosition }"> 
                                         {{elem.text}}
                                     </p>
@@ -47,7 +47,7 @@
                                             {{elem.btnName}}
                                         </v-btn>                                   
                                     </p>
-                                </v-col>
+                                </div>
                             </v-row>
                         </div>
                         <span v-if="!finish">

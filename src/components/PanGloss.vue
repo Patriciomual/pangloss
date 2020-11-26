@@ -24,8 +24,7 @@
 
                                 <v-col cols="12" lg="6" md="6" xs="12" sm="12" class="cinzel" :style="{'font-size': elem.textSize }"
                                         v-if="elem.image !== null">
-                                    <p  :style="{'text-align': elem.textPosition }"> 
-                                        {{elem.text}}
+                                    <p  :style="{'text-align': elem.textPosition }" v-html="elem.text">
                                     </p>
                                     <p :style="{'text-align': elem.btnPosition}">
                                         <v-btn  rounded text :style="{'color': elem.btnColor}" :href="elem.btnHref">
